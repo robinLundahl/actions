@@ -4,10 +4,11 @@ import { StackNavigatorParamList } from '../navigation/HomeStackNavigation';
 
 type Props = NativeStackScreenProps<StackNavigatorParamList, 'Details'>;
 
-export default function DetailsScreen() {
+export default function DetailsScreen({ route }: Props) {
   return (
     <View style={styles.container}>
       <Text>DetailsPage!</Text>
+      <Text>{route.name}Page!</Text>
     </View>
   );
 }
